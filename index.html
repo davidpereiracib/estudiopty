@@ -23,17 +23,17 @@
   }
 
   :root {
-    --papel: #f2f0e9;
-    --papel-2: #e9e6dc;
-    --tinta: #101312;
-    --tinta-2: #1a1e1c;
-    --gris: #5f6660;
-    --linea: #d9d5c8;
-    --linea-osc: #2b302d;
-    --verde: #0e7c5b;
-    --neon: #2fe6a0;
-    --sol: #ffc53d;
-    --rojo: #e0432f;
+    --papel: #fbf7ef;
+    --papel-2: #f2ead9;
+    --tinta: #101b2d;
+    --tinta-2: #16233a;
+    --gris: #5d6473;
+    --linea: #e8ddc9;
+    --linea-osc: #27354f;
+    --verde: #e8492b;
+    --neon: #ff6b4a;
+    --sol: #ffb01f;
+    --rojo: #ffb01f;
     --wa: #1f9d55;
     --display: 'Bricolage Grotesque', 'Avenir Next', 'Helvetica Neue', sans-serif;
     --cuerpo: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
@@ -200,9 +200,9 @@
     transform-origin: left bottom;
     animation: subir 0.9s cubic-bezier(.2,.75,.2,1) forwards;
   }
-  .hero h1 .linea:nth-child(1) > span { animation-delay: 0.15s; }
-  .hero h1 .linea:nth-child(2) > span { animation-delay: 0.27s; }
-  .hero h1 .linea:nth-child(3) > span { animation-delay: 0.39s; }
+  .hero h1 .linea:nth-child(1) > span { animation-delay: 1.5s; }
+  .hero h1 .linea:nth-child(2) > span { animation-delay: 1.62s; }
+  .hero h1 .linea:nth-child(3) > span { animation-delay: 1.74s; }
   @keyframes subir { to { transform: translateY(0) rotate(0); } }
 
   .hero h1 .feas { position: relative; white-space: nowrap; }
@@ -218,7 +218,7 @@
     stroke-linecap: round;
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
-    animation: tachar 0.5s 1.15s cubic-bezier(.6,0,.4,1) forwards;
+    animation: tachar 0.5s 2.5s cubic-bezier(.6,0,.4,1) forwards;
   }
   @keyframes tachar { to { stroke-dashoffset: 0; } }
   .hero h1 .venden { color: var(--verde); font-style: normal; }
@@ -233,9 +233,9 @@
   .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
   .hero-nota { font-size: 0.85rem; color: var(--gris); margin-top: 1.1rem; }
   .hero .anim { opacity: 0; transform: translateY(20px); animation: entrar 0.8s cubic-bezier(.2,.7,.2,1) forwards; }
-  .hero .anim.d1 { animation-delay: 0.55s; }
-  .hero .anim.d2 { animation-delay: 0.7s; }
-  .hero .anim.d0 { animation-delay: 0.05s; }
+  .hero .anim.d1 { animation-delay: 1.95s; }
+  .hero .anim.d2 { animation-delay: 2.1s; }
+  .hero .anim.d0 { animation-delay: 1.4s; }
   @keyframes entrar { to { opacity: 1; transform: none; } }
 
   .bajar {
@@ -246,7 +246,7 @@
     font-size: 0.72rem; font-weight: 600;
     letter-spacing: 0.25em; text-transform: uppercase;
     opacity: 0;
-    animation: entrar 1s 1.6s ease forwards;
+    animation: entrar 1s 2.9s ease forwards;
   }
   .bajar::after {
     content: '';
@@ -323,7 +323,7 @@
     margin: 0 0 1rem;
   }
   .sub { color: var(--gris); max-width: 40rem; font-size: 1.1rem; margin: 0 0 3rem; }
-  .osc .sub { color: #a8b0a9; }
+  .osc .sub { color: #a5aec2; }
 
   /* ================= antes / después ================= */
   .ba-marco {
@@ -369,11 +369,11 @@
     padding: 1% 2.5%; margin-top: 2%;
   }
 
-  .bonito { background: #101418; color: #f2f5f3; font-family: var(--cuerpo); }
+  .bonito { background: #101b2d; color: #f2f5f3; font-family: var(--cuerpo); }
   .bonito .mini-nav { display: flex; align-items: center; gap: 2%; font-size: clamp(0.55rem, 1.2vw, 0.82rem); }
   .bonito .mini-logo { font-family: var(--display); font-weight: 800; font-size: clamp(0.72rem, 1.7vw, 1.1rem); }
   .bonito .mini-logo b { color: var(--neon); }
-  .bonito .mini-nav span { color: #8b969b; margin-left: auto; }
+  .bonito .mini-nav span { color: #8b96a8; margin-left: auto; }
   .bonito h3 {
     font-family: var(--display); font-weight: 800;
     font-size: clamp(1.15rem, 3.2vw, 2.3rem);
@@ -381,7 +381,7 @@
     margin: 5% 0 2%;
   }
   .bonito h3 b { color: var(--neon); }
-  .bonito p { color: #aeb8b3; font-size: clamp(0.6rem, 1.4vw, 0.92rem); margin: 0 0 6%; line-height: 1.5; }
+  .bonito p { color: #aab4c4; font-size: clamp(0.6rem, 1.4vw, 0.92rem); margin: 0 0 6%; line-height: 1.5; }
   .bonito .mini-wa {
     display: inline-block;
     background: var(--wa); color: #fff;
@@ -399,9 +399,9 @@
     font-style: normal;
     min-height: clamp(1.5rem, 4.5vw, 3rem);
   }
-  .bonito .mini-der i:nth-child(1) { background: linear-gradient(120deg, #2c4a3a, #17392b 60%, #0f2b20); }
-  .bonito .mini-der i:nth-child(2) { background: linear-gradient(120deg, #4a3a24, #3a2c18 60%, #2b2012); }
-  .bonito .mini-der i:nth-child(3) { background: linear-gradient(120deg, #23343f, #182731 60%, #101d26); border-left: 3px solid var(--neon); }
+  .bonito .mini-der i:nth-child(1) { background: linear-gradient(120deg, #6b3524, #4a2318 60%, #331812); }
+  .bonito .mini-der i:nth-child(2) { background: linear-gradient(120deg, #6b5324, #4a3a18 60%, #332812); }
+  .bonito .mini-der i:nth-child(3) { background: linear-gradient(120deg, #24344f, #1a2740 60%, #131d31); border-left: 3px solid var(--neon); }
 
   .ba input[type=range] {
     position: absolute; inset: 0;
@@ -438,7 +438,7 @@
     pointer-events: none;
   }
   .ba-tag.antes { left: 3%; background: #fff; color: var(--rojo); border: 1.5px solid #ecc7c1; }
-  .ba-tag.despues { right: 3%; background: rgba(47,230,160,0.14); color: var(--neon); border: 1.5px solid rgba(47,230,160,0.4); }
+  .ba-tag.despues { right: 3%; background: rgba(255,107,74,0.14); color: var(--neon); border: 1.5px solid rgba(255,107,74,0.4); }
   .ba-pie { text-align: center; color: var(--gris); font-size: 0.9rem; margin-top: 1.1rem; }
 
   /* ================= servicios (filas editoriales) ================= */
@@ -479,7 +479,7 @@
     letter-spacing: -0.02em;
     margin: 0;
   }
-  .fila p { color: #a8b0a9; margin: 0; font-size: 0.98rem; }
+  .fila p { color: #a5aec2; margin: 0; font-size: 0.98rem; }
   .fila .flecha {
     font-family: var(--display);
     font-size: 1.8rem;
@@ -552,7 +552,7 @@
     aspect-ratio: 16/8;
     background:
       radial-gradient(ellipse 120% 90% at 20% 10%, rgba(61,139,232,0.25), transparent 55%),
-      #101418;
+      #101b2d;
     display: grid; place-items: center;
     position: relative;
     overflow: hidden;
@@ -606,23 +606,118 @@
     cursor: default;
   }
   .cierre .gigante:hover { color: var(--neon); -webkit-text-stroke-color: transparent; }
-  .cierre p { color: #a8b0a9; max-width: 34rem; margin: 0 auto 2.5rem; font-size: 1.1rem; }
-  .cierre .mini { margin-top: 1.6rem; font-size: 0.88rem; color: #78817a; }
+  .cierre p { color: #a5aec2; max-width: 34rem; margin: 0 auto 2.5rem; font-size: 1.1rem; }
+  .cierre .mini { margin-top: 1.6rem; font-size: 0.88rem; color: #7d879c; }
   .cierre .mini a { color: var(--neon); text-decoration: none; }
   .cierre .mini a:hover { text-decoration: underline; }
 
   /* ================= footer ================= */
   footer {
     background: var(--tinta);
-    color: #78817a;
+    color: #7d879c;
     font-size: 0.9rem;
     border-top: 1px solid var(--linea-osc);
     padding: 1.8rem 0;
   }
   .foot-in { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
   footer .marca { font-size: 1.1rem; color: var(--papel); }
-  footer a { color: #a8b0a9; }
+  footer a { color: #a5aec2; }
   footer a:hover { color: var(--neon); }
+
+
+  /* ================= preloader ================= */
+  .carga {
+    position: fixed; inset: 0; z-index: 100;
+    background: var(--tinta);
+    color: var(--papel);
+    display: flex; align-items: flex-end; justify-content: space-between;
+    padding: 2rem 2.5rem;
+    animation: carga-sube 0.65s 1.3s cubic-bezier(.7,0,.2,1) forwards;
+    pointer-events: none;
+  }
+  .carga .c-marca {
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    opacity: 0;
+    animation: entrar 0.5s 0.1s ease forwards;
+  }
+  .carga .c-marca .pty { color: var(--neon); }
+  .carga .c-marca .punto { color: var(--sol); }
+  .carga .c-num {
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    line-height: 0.85;
+    font-variant-numeric: tabular-nums;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--papel);
+  }
+  @keyframes carga-sube { to { transform: translateY(-101%); visibility: hidden; } }
+
+  /* ================= cursor con etiqueta ================= */
+  .cursor span {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    font-size: 0.6rem; font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--tinta);
+    opacity: 0;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+  }
+  .cursor.etiqueta { width: 68px; height: 68px; background: var(--sol); mix-blend-mode: normal; opacity: 1; }
+  .cursor.etiqueta span { opacity: 1; }
+
+  /* ================= vista flotante servicios ================= */
+  .vista {
+    position: fixed; top: 0; left: 0; z-index: 45;
+    width: 15rem; height: 10.5rem;
+    border-radius: 12px;
+    pointer-events: none;
+    opacity: 0;
+    overflow: hidden;
+    background: var(--papel);
+    transform: translate(-50%, -118%) rotate(3deg) scale(0.88);
+    transition: opacity 0.22s, transform 0.32s cubic-bezier(.2,.7,.2,1);
+    box-shadow: 0 24px 60px -14px rgba(0,0,0,0.55);
+  }
+  .vista.ver { opacity: 1; transform: translate(-50%, -118%) rotate(-2deg) scale(1); }
+  .vista .v-split { display: flex; height: 100%; }
+  .vista .v-split > div {
+    flex: 1; display: grid; place-items: center;
+    font-family: var(--display); font-weight: 800; font-size: 1.3rem;
+  }
+  .vista .v-split .v-viejo { background: #e9e2d3; color: #97917f; text-decoration: line-through; font-family: 'Times New Roman', serif; }
+  .vista .v-split .v-nuevo { background: var(--tinta); color: var(--neon); }
+  .vista .v-browser { height: 100%; background: var(--tinta); padding: 9% 8%; }
+  .vista .v-browser .v-barra {
+    background: #223050; border-radius: 999px;
+    color: var(--neon); font-weight: 700; font-size: 0.78rem;
+    padding: 0.35rem 0.9rem; display: inline-block;
+  }
+  .vista .v-browser .v-bloques { display: flex; gap: 6%; margin-top: 10%; }
+  .vista .v-browser .v-bloques i { flex: 1; height: 3.2rem; background: #1a2740; border-radius: 6px; border-top: 3px solid var(--neon); }
+  .vista .v-escudo { height: 100%; background: var(--tinta); display: grid; place-items: center; text-align: center; color: #fff; }
+  .vista .v-escudo b { font-family: var(--display); font-size: 1.9rem; display: block; }
+  .vista .v-escudo small { font-weight: 600; letter-spacing: 0.06em; font-size: 0.72rem; opacity: 0.85; }
+  @media (pointer: coarse) { .vista { display: none; } }
+
+  /* ================= footer gigante ================= */
+  .foot-gigante {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(3.2rem, 13.5vw, 12.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #43537a;
+    margin-top: 1.8rem;
+    user-select: none;
+    transition: color 0.5s ease, -webkit-text-stroke-color 0.5s ease;
+    cursor: default;
+  }
+  .foot-gigante:hover { color: var(--neon); -webkit-text-stroke-color: transparent; }
+  .foot-gigante .punto-f { color: var(--sol); -webkit-text-stroke: 0; }
 
   /* ================= reduced motion ================= */
   @media (prefers-reduced-motion: reduce) {
@@ -634,6 +729,9 @@
     .pasos::before { transition: none; width: 100%; }
     .cursor { display: none; }
     .bajar::after { animation: none; }
+    .carga { display: none; }
+    .vista { display: none; }
+    .foot-gigante { color: var(--neon); -webkit-text-stroke-color: transparent; }
     .btn:hover, .trabajo:hover, .fila:hover { transform: none; }
   }
 
@@ -657,8 +755,13 @@
 </style>
 </head>
 <body>
+<div class="carga" aria-hidden="true">
+  <span class="c-marca">estudio<span class="pty">pty</span><span class="punto">.</span></span>
+  <span class="c-num" id="c-num">0</span>
+</div>
+<div class="vista" id="vista" aria-hidden="true"></div>
 <div class="grano" aria-hidden="true"></div>
-<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span id="cursor-txt"></span></div>
 
 <header class="top" id="top">
   <div class="wrap top-in">
@@ -669,7 +772,7 @@
       <a href="#proceso">Cómo trabajamos</a>
       <a href="#trabajo">Portafolio</a>
     </nav>
-    <a class="btn btn-verde" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20quiero%20una%20muestra%20gratis%20de%20mi%20p%C3%A1gina%20web.">Muestra gratis</a>
+    <a class="btn btn-verde" href="https://wa.me/50769857816?text=Hola%2C%20quiero%20una%20muestra%20gratis%20de%20mi%20p%C3%A1gina%20web.">Muestra gratis</a>
   </div>
 </header>
 
@@ -685,7 +788,7 @@
       </h1>
       <p class="lead anim d1">Rediseñamos páginas viejas y creamos la primera web de negocios panameños: modernas, rápidas y con WhatsApp al frente. <strong>Le enseñamos una muestra gratis de su página antes de que pague un solo dólar.</strong></p>
       <div class="hero-cta anim d2">
-        <a class="btn btn-wa" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20quiero%20una%20muestra%20gratis%20de%20mi%20p%C3%A1gina%20web.">Pida su muestra gratis</a>
+        <a class="btn btn-wa" href="https://wa.me/50769857816?text=Hola%2C%20quiero%20una%20muestra%20gratis%20de%20mi%20p%C3%A1gina%20web.">Pida su muestra gratis</a>
         <a class="btn btn-borde" href="#antes-despues">Vea la diferencia</a>
       </div>
       <p class="hero-nota anim d2">Sin compromiso · Respuesta el mismo día</p>
@@ -752,20 +855,20 @@
         <p class="sub">Pase el mouse por encima — así de vivo se puede sentir un sitio web.</p>
       </div>
       <div class="filas" data-stagger>
-        <a class="fila" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20quiero%20redise%C3%B1ar%20mi%20p%C3%A1gina%20web." style="text-decoration:none">
-          <span class="num">01</span>
+        <a class="fila" data-vista="redisenno" href="https://wa.me/50769857816?text=Hola%2C%20quiero%20redise%C3%B1ar%20mi%20p%C3%A1gina%20web." style="text-decoration:none">
+          <span class="num">01</span><!--v:redisenno-->
           <h3>Rediseño completo</h3>
           <p>Su página quedó en el 2015: lenta, fea en el celular o marcada como "no segura". La rehacemos moderna y rápida, conservando su información y su dominio.</p>
           <span class="flecha">→</span>
         </a>
-        <a class="fila" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20mi%20negocio%20no%20tiene%20p%C3%A1gina%20web%20y%20quiero%20una." style="text-decoration:none">
-          <span class="num">02</span>
+        <a class="fila" data-vista="primera" href="https://wa.me/50769857816?text=Hola%2C%20mi%20negocio%20no%20tiene%20p%C3%A1gina%20web%20y%20quiero%20una." style="text-decoration:none">
+          <span class="num">02</span><!--v:primera-->
           <h3>Su primera página</h3>
           <p>Hoy solo tiene Instagram o Facebook. Le creamos una web propia que salga en Google, con sus fotos, sus servicios y botón directo a su WhatsApp.</p>
           <span class="flecha">→</span>
         </a>
-        <a class="fila" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20quiero%20que%20se%20encarguen%20del%20mantenimiento%20de%20mi%20web." style="text-decoration:none">
-          <span class="num">03</span>
+        <a class="fila" data-vista="mantenimiento" href="https://wa.me/50769857816?text=Hola%2C%20quiero%20que%20se%20encarguen%20del%20mantenimiento%20de%20mi%20web." style="text-decoration:none">
+          <span class="num">03</span><!--v:mantenimiento-->
           <h3>Dominio y mantenimiento</h3>
           <p>Nos encargamos del dominio, el hosting, el candado de seguridad y los cambios que necesite. Usted atiende su negocio; nosotros, su página.</p>
           <span class="flecha">→</span>
@@ -837,7 +940,7 @@
       <h2 class="gigante" data-reveal>¿Hablamos?</h2>
       <p data-reveal>Escríbanos hoy con el nombre de su negocio. En pocos días le enviamos la muestra de su página — gratis y sin compromiso. Si no le encanta, no pasa nada.</p>
       <div data-reveal>
-        <a class="btn btn-wa" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20quiero%20una%20muestra%20gratis%20de%20mi%20p%C3%A1gina%20web.">Escribir por WhatsApp</a>
+        <a class="btn btn-wa" href="https://wa.me/50769857816?text=Hola%2C%20quiero%20una%20muestra%20gratis%20de%20mi%20p%C3%A1gina%20web.">Escribir por WhatsApp</a>
         <p class="mini">o al correo <a href="mailto:hola@estudiopty.com">hola@estudiopty.com</a></p>
       </div>
     </div>
@@ -850,12 +953,27 @@
     <span>Diseño web para negocios en Panamá · <a href="mailto:hola@estudiopty.com">hola@estudiopty.com</a></span>
     <span>© 2026</span>
   </div>
+  <div class="wrap">
+    <div class="foot-gigante" aria-hidden="true">estudiopty<span class="punto-f">.</span></div>
+  </div>
 </footer>
 
 <script>
 (function () {
   'use strict';
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* preloader: contador 0 -> 100 */
+  if (!reduced) {
+    var num = document.getElementById('c-num');
+    var t0c = null;
+    requestAnimationFrame(function contar(t) {
+      if (t0c === null) t0c = t;
+      var p = Math.min((t - t0c) / 1050, 1);
+      num.textContent = Math.round(100 * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(contar);
+    });
+  }
 
   /* header al rodar */
   var top = document.getElementById('top');
@@ -894,14 +1012,58 @@
       if (!visto) { visto = true; px = cx; py = cy; cursor.classList.add('activo'); }
     });
     document.addEventListener('mouseleave', function () { cursor.classList.remove('activo'); visto = false; });
+    var cursorTxt = document.getElementById('cursor-txt');
     document.addEventListener('mouseover', function (e) {
-      cursor.classList.toggle('grande', !!e.target.closest('a, button, .ba, input'));
+      var etiqueta = '';
+      if (e.target.closest('#ba')) etiqueta = 'ARRASTRE';
+      else if (e.target.closest('.trabajo:not(.pendiente)')) etiqueta = 'VER \u2197';
+      cursorTxt.textContent = etiqueta;
+      cursor.classList.toggle('etiqueta', !!etiqueta);
+      cursor.classList.toggle('grande', !etiqueta && !!e.target.closest('a, button, input'));
     });
     (function seguir() {
       px += (cx - px) * 0.18;
       py += (cy - py) * 0.18;
       cursor.style.transform = 'translate(' + (px - 0) + 'px,' + (py - 0) + 'px) translate(-50%,-50%)';
       requestAnimationFrame(seguir);
+    })();
+  }
+
+  /* botones magnéticos */
+  if (fino && !reduced) {
+    document.querySelectorAll('.btn').forEach(function (b) {
+      b.addEventListener('mousemove', function (e) {
+        var r = b.getBoundingClientRect();
+        var dx = (e.clientX - r.left - r.width / 2) / (r.width / 2);
+        var dy = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+        b.style.transform = 'translate(' + dx * 5 + 'px,' + (dy * 4 - 2) + 'px)';
+      });
+      b.addEventListener('mouseleave', function () { b.style.transform = ''; });
+    });
+  }
+
+  /* vista flotante sobre servicios */
+  var vista = document.getElementById('vista');
+  var VISTAS = {
+    redisenno: '<div class="v-split"><div class="v-viejo">2013</div><div class="v-nuevo">2026</div></div>',
+    primera: '<div class="v-browser"><span class="v-barra">\uD83D\uDD12 sunegocio.com</span><div class="v-bloques"><i></i><i></i></div></div>',
+    mantenimiento: '<div class="v-escudo"><div><b>99.9%</b><small>SU P\u00C1GINA SIEMPRE EN L\u00CDNEA</small></div></div>'
+  };
+  if (fino && !reduced && vista) {
+    var vx = 0, vy = 0, vpx = 0, vpy = 0, vAct = false;
+    document.querySelectorAll('.fila[data-vista]').forEach(function (f) {
+      f.addEventListener('mouseenter', function () {
+        vista.innerHTML = VISTAS[f.dataset.vista] || '';
+        vista.classList.add('ver'); vAct = true;
+      });
+      f.addEventListener('mouseleave', function () { vista.classList.remove('ver'); vAct = false; });
+    });
+    document.addEventListener('mousemove', function (e) { vx = e.clientX; vy = e.clientY; });
+    (function seguirV() {
+      vpx += (vx - vpx) * 0.12;
+      vpy += (vy - vpy) * 0.12;
+      if (vAct) { vista.style.left = vpx + 'px'; vista.style.top = vpy + 'px'; }
+      requestAnimationFrame(seguirV);
     })();
   }
 
