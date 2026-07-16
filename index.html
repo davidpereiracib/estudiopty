@@ -375,39 +375,125 @@
     padding: 1% 2.5%; margin-top: 2%;
   }
 
-  .bonito { background: #0b1544; color: #f2f5f3; font-family: var(--cuerpo); }
-  .bonito .mini-nav { display: flex; align-items: center; gap: 2%; font-size: clamp(0.55rem, 1.2vw, 0.82rem); }
-  .bonito .mini-logo { font-family: var(--display); font-weight: 800; font-size: clamp(0.72rem, 1.7vw, 1.1rem); }
-  .bonito .mini-logo b { color: var(--neon); }
-  .bonito .mini-nav span { color: #8d93b3; margin-left: auto; }
+  /* mini-sitio "después": identidad propia de restaurante, independiente de la paleta */
+  .bonito {
+    background: linear-gradient(165deg, #16211a, #0f1712 60%, #0a0f0b);
+    color: #f3efe6;
+    font-family: var(--cuerpo);
+    display: flex; flex-direction: column;
+  }
+  .bonito .b-nav { display: flex; align-items: center; gap: 3%; font-size: clamp(0.5rem, 1.1vw, 0.78rem); color: #a8b3a4; }
+  .bonito .b-logo { font-family: var(--display); font-weight: 800; color: #f3efe6; font-size: clamp(0.72rem, 1.7vw, 1.1rem); }
+  .bonito .b-logo b { color: #e8a63c; }
+  .bonito .b-links { margin-left: auto; }
+  .bonito .b-btn {
+    border: 1px solid #3a4a3d; border-radius: 999px;
+    padding: 1% 2.6%; color: #f3efe6; font-weight: 600;
+    font-size: clamp(0.5rem, 1.1vw, 0.75rem);
+  }
+  .bonito .b-hero { display: flex; gap: 4%; align-items: center; margin-top: 3%; flex: 1; min-height: 0; }
+  .bonito .b-izq { flex: 1.15; min-width: 0; }
+  .bonito .b-rate { font-size: clamp(0.52rem, 1.2vw, 0.8rem); color: #e8a63c; font-weight: 700; letter-spacing: 0.04em; }
+  .bonito .b-rate span { color: #a8b3a4; font-weight: 400; }
   .bonito h3 {
     font-family: var(--display); font-weight: 800;
-    font-size: clamp(1.15rem, 3.2vw, 2.3rem);
+    font-size: clamp(1.05rem, 3vw, 2.15rem);
     line-height: 1.02; letter-spacing: -0.02em;
-    margin: 5% 0 2%;
+    margin: 3% 0 2%;
   }
-  .bonito h3 b { color: var(--neon); }
-  .bonito p { color: #aeb3cd; font-size: clamp(0.6rem, 1.4vw, 0.92rem); margin: 0 0 6%; line-height: 1.5; }
-  .bonito .mini-wa {
-    display: inline-block;
-    background: var(--wa); color: #fff;
+  .bonito h3 b { color: #e8a63c; }
+  .bonito .b-izq p { color: #a8b3a4; font-size: clamp(0.58rem, 1.35vw, 0.9rem); margin: 0 0 5%; line-height: 1.5; }
+  .bonito .b-ctas { display: flex; gap: 4%; align-items: center; }
+  .bonito .b-wa {
+    background: var(--wa); color: #fff; border-radius: 999px;
+    font-weight: 700; font-size: clamp(0.55rem, 1.25vw, 0.85rem);
+    padding: 2.4% 4.5%; white-space: nowrap;
+  }
+  .bonito .b-menu { color: #e8a63c; font-weight: 700; font-size: clamp(0.55rem, 1.25vw, 0.85rem); white-space: nowrap; }
+  .bonito .b-foto {
+    position: relative; flex: 1; align-self: stretch;
+    border-radius: 10px; overflow: hidden;
+    background:
+      radial-gradient(ellipse 130% 100% at 80% 0%, rgba(232,166,60,0.18), transparent 55%),
+      linear-gradient(135deg, #5d3a1e, #3a2210 55%, #201107);
+    min-height: clamp(4.5rem, 13vw, 10rem);
+  }
+  .bonito .b-bokeh {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 18% 62%, rgba(232,166,60,0.85) 0 4.5%, transparent 7%),
+      radial-gradient(circle at 34% 38%, rgba(255,214,140,0.55) 0 3%, transparent 5.5%),
+      radial-gradient(circle at 55% 68%, rgba(255,183,77,0.7) 0 5%, transparent 8%),
+      radial-gradient(circle at 72% 30%, rgba(255,228,166,0.5) 0 3.5%, transparent 6%),
+      radial-gradient(circle at 86% 58%, rgba(226,140,44,0.65) 0 4%, transparent 7%),
+      radial-gradient(circle at 46% 16%, rgba(255,244,214,0.35) 0 2.5%, transparent 5%),
+      radial-gradient(circle at 65% 85%, rgba(190,100,30,0.5) 0 6%, transparent 9%);
+    filter: blur(7px) saturate(1.15);
+    transform: scale(1.15);
+  }
+  .bonito .b-foto::before {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0; height: 34%;
+    background: linear-gradient(rgba(16,10,4,0), rgba(16,10,4,0.85));
+    z-index: 1;
+  }
+  .bonito .b-cap {
+    position: absolute; left: 5%; bottom: 6%; z-index: 2;
+    font-style: italic;
+    font-size: clamp(0.46rem, 1.05vw, 0.74rem);
+    color: #f0e4cd;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+  }
+  .bonito .b-badge {
+    position: absolute; right: 5%; top: 7%; z-index: 2;
+    background: rgba(10, 15, 11, 0.82);
+    border: 1px solid rgba(232,166,60,0.35);
+    color: #f3efe6;
     border-radius: 999px;
-    font-weight: 700;
-    font-size: clamp(0.6rem, 1.3vw, 0.88rem);
-    padding: 2.2% 5%;
+    font-size: clamp(0.44rem, 1vw, 0.68rem);
+    font-weight: 600;
+    padding: 1.6% 3%;
+    white-space: nowrap;
   }
-  .bonito .mini-grid { display: flex; gap: 5%; margin-top: 2%; align-items: stretch; }
-  .bonito .mini-izq { flex: 1.15; }
-  .bonito .mini-der { flex: 1; display: flex; flex-direction: column; gap: 5%; }
-  .bonito .mini-der i {
-    flex: 1;
+  .bonito .b-badge i { color: #4ade80; font-style: normal; }
+  .bonito .b-platos { display: flex; gap: 3%; margin-top: 3.5%; }
+  .bonito .b-card {
+    flex: 1; display: flex; align-items: center; gap: 5%;
+    background: #1c2a20;
+    border: 1px solid #2c3d30;
     border-radius: 8px;
-    font-style: normal;
-    min-height: clamp(1.5rem, 4.5vw, 3rem);
+    padding: 2% 3%;
+    min-width: 0;
   }
-  .bonito .mini-der i:nth-child(1) { background: linear-gradient(120deg, #6b2456, #4a1839 60%, #331028); }
-  .bonito .mini-der i:nth-child(2) { background: linear-gradient(120deg, #7a4220, #5a2f16 60%, #3d2010); }
-  .bonito .mini-der i:nth-child(3) { background: linear-gradient(120deg, #223066, #1a2450 60%, #131a3d); border-left: 3px solid var(--neon); }
+  .bonito .b-card i {
+    flex: 0 0 clamp(1.1rem, 3vw, 2.2rem);
+    aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, var(--comida1, #e09a44), var(--comida2, #8a4513) 70%);
+    box-shadow: inset 0 0 0 2px #f0e9d8, 0 3px 8px rgba(0,0,0,0.45);
+  }
+  .bonito .b-card.c2 i { --comida1: #c25a35; --comida2: #6e2c14; }
+  .bonito .b-card.c3 i { --comida1: #ecc35a; --comida2: #a3701d; }
+  .bonito .b-card b { display: block; font-size: clamp(0.5rem, 1.15vw, 0.78rem); font-family: var(--display); letter-spacing: 0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bonito .b-card span { color: #e8a63c; font-size: clamp(0.46rem, 1.05vw, 0.72rem); font-weight: 700; }
+  .bonito .b-card > div { min-width: 0; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .bonito .b-badge { animation: b-flotar 3.2s ease-in-out infinite alternate; }
+    @keyframes b-flotar { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+    .bonito .b-foto::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(255,244,220,0.14) 50%, transparent 60%);
+      transform: translateX(-100%);
+      animation: b-brillo 5.5s ease-in-out infinite;
+    }
+    @keyframes b-brillo { 0%, 55% { transform: translateX(-100%); } 75%, 100% { transform: translateX(100%); } }
+    .bonito .b-wa { animation: b-pulso 2.8s ease-in-out infinite; }
+    @keyframes b-pulso {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(31,157,85,0.45); }
+      50% { box-shadow: 0 0 0 7px rgba(31,157,85,0); }
+    }
+  }
 
   .ba input[type=range] {
     position: absolute; inset: 0;
@@ -830,14 +916,20 @@
           </div>
           <div class="ba-capa" id="ba-despues" style="clip-path: inset(0 0 0 50%)">
             <div class="mock bonito" aria-hidden="true">
-              <div class="mini-nav"><span class="mini-logo">El Buen <b>Sabor</b></span><span>Menú · Reservas</span></div>
-              <div class="mini-grid">
-                <div class="mini-izq">
+              <div class="b-nav"><span class="b-logo">El Buen <b>Sabor</b></span><span class="b-links">Menú · Nosotros · Reservas</span><span class="b-btn">Reservar</span></div>
+              <div class="b-hero">
+                <div class="b-izq">
+                  <div class="b-rate">★★★★★ 4.9 <span>· 312 reseñas en Google</span></div>
                   <h3>Sabor de casa,<br>desde <b>1998</b></h3>
                   <p>Cocina panameña en el corazón de la ciudad. Reserve su mesa en un mensaje.</p>
-                  <span class="mini-wa">Reservar por WhatsApp</span>
+                  <div class="b-ctas"><span class="b-wa">Reservar por WhatsApp</span><span class="b-menu">Ver menú →</span></div>
                 </div>
-                <div class="mini-der"><i></i><i></i><i></i></div>
+                <div class="b-foto"><i class="b-bokeh"></i><span class="b-cap">Sancocho de gallina — receta de la casa</span><span class="b-badge"><i>●</i> Abierto · hasta 9 p.m.</span></div>
+              </div>
+              <div class="b-platos">
+                <div class="b-card"><i></i><div><b>Sancocho</b><span>$8.50</span></div></div>
+                <div class="b-card c2"><i></i><div><b>Ropa vieja</b><span>$9.75</span></div></div>
+                <div class="b-card c3"><i></i><div><b>Patacones</b><span>$4.50</span></div></div>
               </div>
             </div>
           </div>
